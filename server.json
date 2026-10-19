@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.princearies/myworker",
+  "title": "Myworker — 20 paid crypto & AI micro-APIs (x402)",
+  "description": "20 paid micro-APIs: token price/risk, DeFi APY, on-chain fees, FX rates, web scraping. USDC per call.",
+  "repository": {
+    "url": "https://github.com/princearies/myworker-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://crypto-micro-agent.mykira.workers.dev/mcp"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+=== REFERENCE WALLET (LOCAL) ===
+Public Key: 3mqWxEAEC2HtEqWwofeeNwmov9XqE4v5d83ZdSsstk4E
+Private Key (base64): [SECURE - saved in .env file with chmod 600]
+Generated: Secure reference file for recovery/backup.
+Wallet Solana: CW5gwvQXsdihUNxEXNF81WbJrDsrEX5dM3bRPPg2AvVo (existing agent wallet)
+New Keypair: 3mqWxEAEC2HtEqWwofeeNwmov9XqE4v5d83ZdSsstk4E
+File permissions: .env will be set to 600 (readable only by owner)

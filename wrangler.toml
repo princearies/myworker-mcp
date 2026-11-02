@@ -1,0 +1,47 @@
+name = "crypto-micro-agent"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bot-db"
+database_id = "60f98cf7-100c-4de3-b885-c48291ed795e"
+
+[[d1_databases]]
+binding = "DB_INCOME"
+database_name = "income-db"
+database_id = "ef4595f6-ffa7-4413-8a49-dc1cf5dc87e7"
+
+[ai]
+binding = "AI"
+
+[vars]
+WALLET_ADDRESS = "3mqWxEAEC2HtEqWwofeeNwmov9XqE4v5d83ZdSsstk4E"
+SOLANA_RPC = "https://solana-rpc.publicnode.com"
+PAPER_TRADING_MODE = "true"
+PAPER_TRADING_UNTIL = "2026-10-28T00:00:00Z"
+MIN_PROFIT_PCT = "0.2"
+TELEGRAM_CHAT_ID = "5495392497"
+# ---- Agent API (x402): jual servis data crypto + AI kepada bot lain ----
+# Dompet terima bayaran. Kosong = guna WALLET_ADDRESS.
+AGENT_WALLET = ""
+# Kunci untuk GET /api/agent/stats?key= (hasil masuk). Kosong = stats dimatikan.
+AGENT_STATS_KEY = "d68aa3b0811f4dbda6b2"
+# "devnet" untuk ujian. Kosong = mainnet.
+SOL_NETWORK = ""
+# Dompet UJIAN kita sendiri (dipisah koma). Bayaran dari dompet ini ditanda
+# "ujian-sendiri" dalam /api/agent/lejar dan TIDAK dikira sebagai pendapatan sebenar.
+# 69RB2Y5... dan CSPZMD... = dompet ujian awal yang kuncinya hilang (18 Okt 2026).
+AGENT_UJIAN_PAYERS = "H4QdKftASRRgo3wJ9jTimFNDZnFxexhVDptSzjWqQB7h,69RB2Y5gmqEmTYsqfYcJiaAhKDiFbmfNUU87q5oTuQr3,CSPZMDnMawCeSZ8WorQnptmaAEJXELTYvGUWsKmntwLy,0x6624b48dc7c2b547438B5D210b2B3C5DD5714473"
+# Ubah harga tanpa deploy (JSON), cth {"peluang":0.02}. Kosong = harga lalai dalam kod.
+AGENT_PRICES = ""
+# ---- x402 STANDARD (V2) ----
+# Dompet EVM untuk terima USDC di Base (eip155:8453). Kosong = aset EVM tidak ditawarkan.
+AGENT_EVM_WALLET = "0x86fFa64e9693D1bf2804c5Ec2bf63dC0250951aD"
+# Fasilitator x402: sahkan (/verify) + selesaikan (/settle). Kosong = PayAI.
+X402_FACILITATOR = "https://facilitator.payai.network"
+# feePayer fasilitator Solana (dari GET /supported). Kosong = nilai lalai PayAI.
+SOLANA_FEE_PAYER = "CjNFTjvBhbJJd2B5ePPMHRLx1ELZpa8dwQgGL727eKww"
